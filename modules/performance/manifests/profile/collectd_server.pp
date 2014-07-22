@@ -21,10 +21,9 @@ class performance::profile::collectd_server {
 
   collectd::plugin::python {
     'locust_plugin':
-      modulepath    => '/usr/lib/collectd',
-      module        => 'locust_plugin',
-      script_source => 'puppet:///modules/performance/files/locust_plugin.py',
-#      config        => {'Cluster' => 'locust'},
+      modulepath    => hiera('collectd::plugin::python::modulepath'),
+      module        => hiera('collectd::plugin::python::module'),
+      script_source => hiera('collectd::plugin::python::script_source'),
   }
 
   collectd::plugin { 'logfile': }
