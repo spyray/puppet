@@ -1,0 +1,3 @@
+role: collectd_server
+#role: collectd_agent
+#role: collectd_agent_cassandra

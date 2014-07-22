@@ -1,0 +1,9 @@
+# parameters for configuration Collectd Agent
+collectd::collectd_server::include: [ '/etc/collectd/filters.conf', '/etc/collectd/thresholds.conf' ]
+collectd::collectd_agent::include: [ '/etc/collectd/filters.conf', '/etc/collectd/thresholds.conf' ]
+collectd::collectd_agent_cassandra::include: [ '/etc/collectd/filters.conf', '/etc/collectd/thresholds.conf' ]
+collectd::plugin::network::server: '192.168.35.4'
+collectd::plugin::network::serverport: '25826'
+collectd::plugin::rrdtool::datadir: '/var/lib/collectd/rrd'
+collectd::plugin::java::service_addr: '127.0.0.1'
+collectd::plugin::java::service_port: '7199'
